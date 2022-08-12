@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  padding-top: 25px;
 }
 
 .App-logo {
@@ -35,4 +36,51 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.postfilter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+.post-enter {
+  opacity: 0;
+  transform: translateX(-100px);
+}
+.post-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: transform 200ms linear;
+}
+.post-exit {
+  transform: translateX(0);
+  opacity: 1;
+}
+.post-exit-active {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: transform 200ms linear;
+}
+
+.MyButton {
+  border-color: white;
+  box-shadow: inset 0 0 6px;
+  font-size: 16px;
+  min-width: 100px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: inherit;
+  cursor: pointer;
+  transition: 0.3s linear;
+  padding: 0 10px;
+}
+
+.MyButton:hover {
+  background-color: rgba(170, 170, 170, 0.774);
+}
+
+.MyButton_active {
+  background-color: rgba(53, 96, 151, 0.5);
 }
